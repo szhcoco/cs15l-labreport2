@@ -55,6 +55,7 @@ static int[] reversed(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = newArray[arr.length - i - 1];
     }
+}
 ```
 
 The following is the code after correction:
@@ -69,7 +70,7 @@ static int[] reversed(int[] arr) {
       arr[i] = newArray[arr.length - i - 1];
     }
     return arr;
-    }
+}
 ```
 
 The original code could not work appropriately is because it does not assign the same elements stored in the list ```arr ```into the new defined array ```newArray```. Without assigning, the new array has the same length as ```arr``` but all the elements in there are 0. Therefore, when it assign the elements in ```arr``` with the current element in ```newArray```, all of the elements would become 0. For correction, I copied all of the values in ```arr``` into the ```newArray```, so we can use these values to re-assign elements in ```arr``` in the reversed order. 
